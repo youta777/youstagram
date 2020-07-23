@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= ./bootstrap_import
+ *= ./layouts/navbar
  *= require_tree .
  *= require_self
  */
