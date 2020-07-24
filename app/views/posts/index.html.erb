@@ -42,7 +42,6 @@
           <div>
             <span><strong><%= post.user.name %></strong></span>
             <span><%= post.caption %></span>
-            <%= link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post), class: "post-time no-text-decoration" %>
             <!-- コメント -->
             <div id="comment-post-<%= post.id.to_s %>">
               <%= render 'comment_list', { post: post } %>
