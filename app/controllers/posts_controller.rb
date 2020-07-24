@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  # ログインユーザのみ
+  before_action :authenticate_user!
+
   def new
     @post = Post.new
     @post.photos.build
