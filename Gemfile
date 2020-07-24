@@ -16,6 +16,10 @@ gem 'jquery-rails', '4.4.0'
 gem 'bootstrap', '4.5.0'
 
 gem 'devise', '4.7.2'
+# ファイルを簡単かつ柔軟にアップロードする方法を提供するライブラリ
+gem 'carrierwave', '2.1.0'
+# 画像のリサイズ
+gem 'mini_magick', '4.10.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
