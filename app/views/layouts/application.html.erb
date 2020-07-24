@@ -11,7 +11,9 @@
   </head>
 
   <body>
-    <%= render 'partial/navbar' %>
+    <%= render 'partial/navbar' if current_user %>
+    
+    <%= render 'partial/flash_messages' %>
 
     <%= yield %>
   </body>
