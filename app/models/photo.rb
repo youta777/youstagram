@@ -1,5 +1,5 @@
 class Photo < ApplicationRecord
-  belong_to :post
+  belongs_to :post
 
   validates :image, presence: true
 
