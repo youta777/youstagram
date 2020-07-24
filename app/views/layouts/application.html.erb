@@ -11,8 +11,14 @@
   </head>
 
   <body>
-    <%= render 'partial/navbar' %>
+    <div id="wrapper">
+      <%= render 'partial/navbar' if current_user %>
+    
+      <%= render 'partial/flash_messages' %>
 
-    <%= yield %>
+      <%= yield %>
+
+      <%= render 'partial/footer' %>
+    </div>
   </body>
 </html>

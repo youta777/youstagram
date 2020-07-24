@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 gem 'rails', '6.0.0'
-gem 'mysql2', '~> 0.4.4'
+gem 'mysql2', '0.5.3'
 gem 'puma', '3.12.1'
 gem 'sass-rails', '5.1.0'
 gem 'webpacker', '4.0.7'
@@ -14,6 +14,8 @@ gem 'bootsnap', '1.4.4', require: false
 gem 'uglifier', '4.2.0'
 gem 'jquery-rails', '4.4.0'
 gem 'bootstrap', '4.5.0'
+
+gem 'devise', '4.7.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
