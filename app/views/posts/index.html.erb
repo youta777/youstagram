@@ -32,7 +32,7 @@
                 <%= link_to "いいね", post_likes_path(post), method: :POST, remote: true, class: "love hide-text" %>
               <% end %>
             </div>
-            <%= link_to "", "#", class: "comment" %>
+            <%= link_to "", post_path(post), class: "comment" %>
           </div> 
           <!--　いいね数 -->
           <div id="like-text-post-<%= post.id.to_s %>">
