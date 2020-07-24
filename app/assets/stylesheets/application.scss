@@ -12,6 +12,8 @@
  *
  *= ./bootstrap_import
  *= ./layouts/navbar
+ *= ./common
+ *= ./users/devise
  *= require_tree .
  *= require_self
  */
