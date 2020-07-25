@@ -10,14 +10,15 @@
         <% if @user == current_user %>
           <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-dark common-btn edit-profile-btn" %>
         <% end %>
-      </div>
-      <% if @user == current_user %>
-        <div class="row">
-          <p>
-            <%= @user.email %>
-          </p>
+        <div class="follow-btn">
+          <%= render 'relationships/follow_button', user: @user %>
         </div>
-      <% end %>
+      </div>
+      <div class="profile-status">
+        <p class="profile-text mr-5">投稿数<span class="font-weight-bold num">10</span>件</p>
+        <p class="profile-text mr-5">フォロー中<span class="font-weight-bold num"><%= @count_followings %></span>人</p>
+        <p class="profile-text">フォロワー<span class="font-weight-bold num"><%= @count_followers %></span>人</p>
+      </div>
     </div>
   </div>
 </div>

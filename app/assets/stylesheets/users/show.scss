@@ -18,16 +18,23 @@
   font-size: 14px;
 }
 
-.setting {
-  background-image: image-url("parts4.png");
-  background-repeat: no-repeat;
-  height: 24px;
-  width: 24px;
-  background-color: transparent;
-  margin: 18px 0 0 10px;
-  background-size: 22px !important;
-  border: none;
-  &:hover {
-    cursor: pointer;
+.follow-btn {
+  margin: auto 20px;
+}
+
+.row {
+  margin-top: 32px;
+}
+
+.profile-status {
+  display: flex;
+  margin-top: 20px;
+
+  .profile-text {
+    font-size: 18px;
+  }
+  .num {
+    font-size: 24px;
+    margin-left: 2px;
   }
 }
