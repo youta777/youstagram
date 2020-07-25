@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:account_update, keys: [:name])
     end
     
+    # フォローフォロワー数のカウント
+    def counts(user)
+      @count_followings = user.followings.count
+      @count_followers = user.followers.count
+    end
 end

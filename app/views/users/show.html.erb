@@ -14,13 +14,11 @@
           <%= render 'relationships/follow_button', user: @user %>
         </div>
       </div>
-      <% if @user == current_user %>
-        <div class="row">
-          <p>
-            <%= @user.email %>
-          </p>
-        </div>
-      <% end %>
+      <div class="profile-status">
+        <p class="profile-text mr-5">投稿数<span class="font-weight-bold num">10</span>件</p>
+        <p class="profile-text mr-5">フォロー中<span class="font-weight-bold num"><%= @count_followings %></span>人</p>
+        <p class="profile-text">フォロワー<span class="font-weight-bold num"><%= @count_followers %></span>人</p>
+      </div>
     </div>
   </div>
 </div>
