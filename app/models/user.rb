@@ -14,6 +14,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 50 }
 
+  # プロフィール編集
   def update_without_current_password(params, *options)
     params.delete(:current_password)
 
@@ -25,5 +26,23 @@ class User < ApplicationRecord
     result = update_attributes(params, *options)
     clean_up_passwords
     result
+  end
+
+  # フォロー
+  def follow(other_user)
+    # 自分自身ではない場合
+    unless self == other_user
+      # フォローしていなければフォローする
+      self.relationships.find_or_create_by(follow_id: other_user.id)
+    end
+  end
+
+  def unfollow(other_user)
+    relationship = self.relationships.find_by(follow_id: other_user.id)
+    relationship.destroy if relationship
+  end
+
+  def following?(other_user)
+    self.followings.include?(other_user)
   end
 end
