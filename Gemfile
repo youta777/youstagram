@@ -17,7 +17,7 @@ gem 'bootstrap', '4.5.0'
 
 gem 'devise', '4.7.2'
 # ファイルを簡単かつ柔軟にアップロードする方法を提供するライブラリ
-gem 'carrierwave', '2.1.0'
+gem 'carrierwave', '2.1.1'
 # 画像のリサイズ
 gem 'mini_magick', '4.10.1'
 
